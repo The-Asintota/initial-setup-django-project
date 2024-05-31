@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "1.0.0"
+description = ""
+authors = ["Carlos Aguirre <aguizandre.2803@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "{{ cookiecutter.project_name }}" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.6"
+python-decouple = "^3.8"
+django-cors-headers = "^4.3.1"
+django-extensions = "^3.2.3"
+gunicorn = "^22.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest-django = "^4.8.0"
+faker = "^25.3.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+commitizen = "^3.27.0"
+pre-commit = "^3.7.1"
+cookiecutter = "^2.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 80
+target-version = ["py311"]
+include = '\.pyi?$'
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "3.27.0"
+tag_format = "v$version"
+
+[tool.pytest.ini_options]
+pythonpath = "{{ cookiecutter.project_name }}"
+DJANGO_SETTINGS_MODULE = "settings.environments.testing"
+python_files = "tests.py test_*.py *_tests.py"
+minversion = "8.2.1"
+addopts = "-v"
+testpaths = [
+    "tests",
+]
