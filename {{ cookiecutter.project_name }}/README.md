@@ -20,6 +20,7 @@ La estructura del proyecto es la siguiente:
         └── asgi.py
         └── urls.py
         └── wsgi.py
+    └── 📁apps
     └── manage.py
 └── 📁tests
 └── pyproject.toml
