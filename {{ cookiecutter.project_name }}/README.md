@@ -48,7 +48,7 @@ Primero debes seguir las siguientes instrucciones y dependiendo de que manera qu
 - **Clonar repositorio:** Para clonar este repositorio ejecuta los siguientes comandos.
     
     ```bash
-
+    git clone {{ cookiecutter.repository }}
     ```
     
 - **Crear y activar entorno virtual:** Creares un entorno virtual con el siguiente comando, en este entorno instalaremos todas las dependencias de este proyecto.

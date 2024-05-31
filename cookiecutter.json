@@ -1,3 +1,5 @@
 {
-    "project_name": "my project"
+    "project_name": "Nombre del proyecto",
+    "author": "Nombre del completo del autor o organización",
+    "repository": "URL del repositorio"
 }
