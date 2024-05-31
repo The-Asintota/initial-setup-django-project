@@ -1,0 +1,13 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "black-formatter.args": [
+            "--line-length", "80",
+            "--target-version", "py311",
+            "--include", "\\.pyi?$",
+            "--check",
+            "--diff",
+        ],
+        "editor.formatOnSave": true
+      }
+}
